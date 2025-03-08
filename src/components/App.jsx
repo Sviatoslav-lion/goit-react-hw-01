@@ -4,6 +4,8 @@ import Profile from '../components/Profile/Profile.jsx';
 import userData from '../userData.json';
 import FriendList from '../components/FriendList/FriendList.jsx';
 import friendsData from '../friends.json';
+import TransactionHistory from '../components/TransactionHistory/TransactionHistory.jsx';
+import transactionData from '../transaction.json';
 
 // const [count, setCount] = useState(0);
 
@@ -18,7 +20,8 @@ export default function App() {
         image={userData.avatar}
         stats={userData.stats}
       />
-      <FriendList friends1={friendsData} />
+      <FriendList friends={friendsData} />
+      <TransactionHistory items={transactionData} />
     </div>
   );
 }

@@ -8,28 +8,30 @@ export default function Profile({
   stats: { followers = 0, views = 0, likes = 0 }, // об'єкт з інформацією про активності
 }) {
   return (
-    <div className={css.profile}>
-      <div className={css.info}>
-        <img className={css.avatar} src={image} alt={name} />
-        <p className={css.name}>{name}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <div>
+      <div className={css.profile}>
+        <div className={css.info}>
+          <img className={css.avatar} src={image} alt={name} />
+          <p className={css.name}>{name}</p>
+          <p className={css.tag}>@{tag}</p>
+          <p className={css.location}>{location}</p>
+        </div>
 
-      <ul className={css.stats}>
-        <li className={css.item}>
-          <span className={css.itemInfo}>Followers</span>
-          <span className={css.itemNumbers}>{followers}</span>
-        </li>
-        <li className={css.item}>
-          <span className={css.itemInfo}>Views</span>
-          <span className={css.itemNumbers}>{views}</span>
-        </li>
-        <li className={css.item}>
-          <span className={css.itemInfo}>Likes</span>
-          <span className={css.itemNumbers}>{likes}</span>
-        </li>
-      </ul>
+        <ul className={css.stats}>
+          <li className={css.item}>
+            <span className={css.itemInfo}>Followers</span>
+            <span className={css.itemNumbers}>{followers}</span>
+          </li>
+          <li className={css.item}>
+            <span className={css.itemInfo}>Views</span>
+            <span className={css.itemNumbers}>{views}</span>
+          </li>
+          <li className={css.item}>
+            <span className={css.itemInfo}>Likes</span>
+            <span className={css.itemNumbers}>{likes}</span>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
